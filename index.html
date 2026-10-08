@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parrot+ | Love Lagoon Casting</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: white;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: black;
+            border-bottom: 1px solid #222;
+        }
+
+        h1 {
+            color: #00ffe1;
+            letter-spacing: 2px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .poster {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #aaa;
+            max-width: 600px;
+            margin: 10px auto 30px;
+        }
+
+        .btn {
+            background: #00ffe1;
+            color: black;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 40px 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            background: #111;
+            border: 1px solid #333;
+            color: white;
+        }
+
+        label {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-top: 4px;
+        }
+
+        .submit {
+            background: #ff0077;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🦜 PARROT+</h1>
+    </header>
+
+    <div class="hero">
+        <!-- Replace src with your own image later -->
+        <img src="love-lagoon.png" class="poster">
+
+        <h2>LOVE LAGOON: SEASON 5</h2>
+
+        <p>
+            Twelve singles. One villa. And three hundred thousand reasons to fake it.
+            <br><br>
+            New season. New rules. Same old heartbreak.
+            <br><br>
+            Applications are now open.
+        </p>
+
+        <a href="#apply" class="btn">Apply Now</a>
+    </div>
+
+    <div class="section" id="apply">
+        <h2>Application Form</h2>
+
+        <form id="form" onsubmit="submitForm(event)">
+
+            <label>Full Name</label>
+            <input type="text" required>
+
+            <label>Age (21+ only)</label>
+            <input type="number" required>
+
+            <label>Location</label>
+            <input type="text" required>
+
+            <label>Instagram Handle</label>
+            <input type="text">
+
+            <label>TikTok Handle</label>
+            <input type="text">
+
+            <label>Have you watched Love Lagoon before?</label>
+            <select required>
+                <option value="">Select</option>
+                <option>Yes — every episode</option>
+                <option>Some of it</option>
+                <option>No</option>
+            </select>
+
+            <label>Describe yourself in one sentence</label>
+            <textarea required></textarea>
+
+            <label>What kind of partner do you usually go for?</label>
+            <textarea></textarea>
+
+            <label>What kind of partner do you destroy emotionally?</label>
+            <textarea></textarea>
+
+            <label>Biggest toxic trait (be honest)</label>
+            <textarea></textarea>
+
+            <label>Have you ever lied in a relationship to get what you wanted?</label>
+            <select>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Prefer not to say</option>
+            </select>
+
+            <label>Would you couple up for strategy instead of feelings?</label>
+            <select>
+                <option>Absolutely</option>
+                <option>Depends</option>
+                <option>Never</option>
+            </select>
+
+            <label>How would you feel being edited as the villain?</label>
+            <textarea></textarea>
+
+            <label>Pick your red flag</label>
+            <select>
+                <option>Falls in love too fast</option>
+                <option>Never commits</option>
+                <option>Loves attention more than people</option>
+                <option>Emotionally unavailable but flirty</option>
+            </select>
+
+            <label>What would make you walk off the show?</label>
+            <textarea></textarea>
+
+            <div class="checkbox-group">
+                <input type="checkbox" required>
+                <label>I understand that producers may influence relationships, dates, and outcomes.</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" required>
+                <label>I consent to 24/7 filming, including emotionally vulnerable moments.</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" required>
+                <label>I understand that not everything shown will reflect reality.</label>
+            </div>
+
+            <button class="submit">Submit Application</button>
+
+        </form>
+    </div>
+    <div id="modal" style="
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+">
+
+        <div style="
+        background: linear-gradient(145deg, #111, #000);
+        border: 1px solid #00ffe1;
+        padding: 30px;
+        max-width: 420px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 0 25px rgba(0,255,225,0.2);
+        animation: fadeIn 0.4s ease;
+    ">
+
+            <h2 style="color:#00ffe1; margin-bottom:10px;">
+                Application Received
+            </h2>
+
+            <p style="color:#ccc; font-size:14px; line-height:1.5;">
+                Your submission has entered the <b>Parrot+ Casting System</b>.<br><br>
+                A casting liaison may review your profile shortly.<br>
+                Or not.<br><br>
+                Either way… stay close to your phone.
+            </p>
+
+            <p style="color:#ff0077; margin-top:15px; font-size:13px;">
+                LOVE LAGOON // SEASON 5
+            </p>
+
+            <button onclick="closeModal()" style="
+            margin-top:20px;
+            background:#00ffe1;
+            border:none;
+            padding:10px 20px;
+            font-weight:bold;
+            cursor:pointer;
+            border-radius:6px;
+        ">
+                Close
+            </button>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        © Parrot+ Originals <br>
+        Romance. Horror. Reality. We’ve got it all.
+    </div>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            document.getElementById("modal").style.display = "flex";
+
+            document.getElementById("form").reset();
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
